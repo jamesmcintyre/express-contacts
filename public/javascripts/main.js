@@ -22,7 +22,8 @@ function addNewContact(){
   $.post( "/contacts/add", newContact)
   .done(function( data ) {
     var reqData = data;
-    viewContact(reqData);
+    window.location.href = '/contacts/view/'+newContact.dateid ;
+    // viewContact(reqData);
     // console.log('received data:'+data);
     // alert( "Data Loaded: " + data );
     // $(document).load('/contacts/view/');

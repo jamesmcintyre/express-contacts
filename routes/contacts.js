@@ -40,6 +40,9 @@ router.get('/view/:contactKey', function(req, res, next){
 
   var arr = [];
   var retrievalKey = req.params.contactKey;
+  console.log('the key from url: '+retrievalKey);
+  var retrievedContact = {};
+
   console.log(req.body);
 
   fs.readFile('./data/data.json', function(err, data) {
@@ -49,15 +52,24 @@ router.get('/view/:contactKey', function(req, res, next){
     arr = (JSON.parse(data) || []);
 
 
-  var retrievalKey = req.body.key;
+  // var retrievalKey = req.body.key;
   console.log('retrieval key is: '+retrievalKey);
   console.log('arr is:'+arr);
 
-  var retrievedContact = arr.filter(function( obj ) {
-  return obj.dateid === retrievalKey;})[0];
+  // var retrievedContact = arr.filter(function( obj ) {
+  // return obj.dateid === retrievalKey;})[0];
+
+  for (var i=0; i<arr.length; i++) {
+    if (arr[i].dateid === retrievalKey){
+      retrievedContact = arr[i];
+    }
+  }
+
+
+  console.log(retrievedContact);
 
   console.log('retrieved contact:  '+JSON.stringify(retrievedContact));
-  res.render('view', retrievedContact);
+  res.render('view', {retrievedContact: retrievedContact});
   });
 
 });
