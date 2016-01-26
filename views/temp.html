@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacts</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+
+  <script src="javascripts/main.js"></script>
+
+</head>
+<body>
+
+  <div class="container-fluid">
+
+    <div id="topspacer" class="row">
+
+    </div>
+
+    <div id="maincontainer" class="row">
+
+      <div id="left-panel" class="col-sm-3">
+        <ul id="nav">
+          <li id="addnew">
+            <a href="/contacts/add">Add New Contact!</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div id="content-panel" class="col-sm-9">
+        <div class="row" id="search">
+          <input type="text" name="" class="form-control" id="searchinput">
+          <button type="submit" id="searchsub" class="btn btn-default">Search</button>
+        </div>
+
+        <div class="row" id="results">
+          <table id="contacts" class="table">
+            <tr class="contact">
+              <td class="name"></td>
+              <td class="phone"></td>
+              <td class="address"></td>
+              <td class="edit"></td>
+            </tr>
+          </table>
+        </div>
+
+
+      </div>
+    </div>
+
+    
+  </div>
+
+</body>
+</html>

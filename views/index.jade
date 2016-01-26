@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  #search.row
+    input#searchinput.form-control(type='text', name='')
+    button#searchsub.btn.btn-default(type='submit') Search
+  
+  
+  #results.row
+  
+    table#contacts.table
+      tr.header
+        th
+          p Name
+        th
+          p Phone
+        th
+          p Address
+      
+      each item in contactsArr
+        tr.contact
+          td.name
+            p= item.firstname
+          td.phone
+            p= item.phone
+          td.address
+            p= item.address
+          td.edit
+            a(href="/contacts/edit")
+
+  

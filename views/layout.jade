@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Contacts
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+    script(src='/javascripts/main.js')
+  body
+    .container-fluid
+    #topspacer.row
+    #maincontainer.row
+      #left-panel.col-sm-3
+        ul#nav
+          li#addnew
+            a(href='/contacts/add') Add New Contact!
+      #content-panel.col-sm-9
+        block content
+       
+    

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  #addcontact.row
+    label(for="firstname") First Name:
+    input#firstname.form-control(type='text', name='')
+    label(for="lastname") Last Name:
+    input#lastname.form-control(type='text', name='')
+    label(for="address") Address:
+    input#address.form-control(type='text', name='')
+    label(for="phone") Phone:
+    input#phone.form-control(type='text', name='')
+    button#addnewcontact.btn.btn-default(type='submit') Add Contact
