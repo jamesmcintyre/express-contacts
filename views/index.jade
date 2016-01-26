@@ -16,11 +16,13 @@ block content
           p Phone
         th
           p Address
+        th
+          p View
       
       each item in contactsArr
         tr.contact
           td.name
-            p= item.firstname
+            p= item.firstname+' '+item.lastname
           td.phone
             p= item.phone
           td.address
